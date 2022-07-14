@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>AJAX Examples</title>
+<script>
+
+//in this part the NPJRock programmer should do something
+
+//The following code is being written by the TMJRock user
+function DataModel()
+{
+this.data=null;
+this.getRowCount==function()
+{
+if(this.data==null) return 0;
+else return this.data.length;
+}
+}
+var myDataModel=new DataModel();
+function whatever()
+{
+//var employeed=[{}{}{}]
+myDataModel.data=employees;
+//code to populate myDataModel with data(list of objects)
+}
+function doSomething()
+{
+$$$.grid("someId",{
+"model"=myDataModel,
+"pagination":true,
+"pageSize":10,
+"rowSelectionEnabled":true
+})
+}
+$$$.onDocumentLoaded(doSomething);
+</script>
+</head>
+<body>
+<div id='someId'>
+</div>
+
+</body>
+</html>
+

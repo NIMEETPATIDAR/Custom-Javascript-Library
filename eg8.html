@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AJAX Examples</title>
+    <script>
+      /*
+      window.addEventListener("load", function () {
+        var a = document.getElementsByTagName("*");
+        alert(a.length);
+        for (let x = 0; x < a.length; x++) alert(a[x].nodeName);
+      });
+      */
+      function doSomething() {
+        let a = document.getElementById("positionA");
+        let b = document.getElementById("tb");
+        b.remove();
+        a.append(b);
+      }
+      function putItRightBack() {
+        let a = document.getElementById("tbdv");
+        let b = document.getElementById("tb");
+        b.remove();
+        a.append(b);
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="doSomething()">Change Position</button>
+    <button type="button" onclick="putItRightBack()">Change Position</button>
+    <div>
+      <h1></h1>
+      <span id="positionA"></span>
+      <br /><br />
+      God is Great.<br />
+      Ujjain is the city of GODS. <br /><br />
+      <div id="tbdv">
+        <table id="tb" border="1">
+          <tr>
+            <td>God is</td>
+            <td>Great</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

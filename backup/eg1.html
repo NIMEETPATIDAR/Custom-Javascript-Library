@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>AJAX Examples</title>
+
+<script>
+
+// This will finally be part of NPJRock JavaScript Library
+
+function $$$(parameter){
+
+}
+
+$$$.ajax=function(obj){
+
+}
+
+
+
+
+
+
+
+// NPJRock JavaScript Library code ends here.
+
+function populateDesignations()
+{
+
+//first assignment
+$$$.ajax({
+"url":"servletOne",
+"methodType":"GET",
+"success":function(responseData){
+var designations=JSON.parse(responseData);
+alert(designations);
+
+
+//second assignment.
+$$$("designationCode").fillComboBox({
+"dataSource":designations,
+"text":"title",
+"value":"code"
+"firstOption":{
+"text":"<select designation>",
+"value":"-1"
+}});
+
+
+
+ 
+},
+"failure":function(){
+alert("Some problem");
+}
+}); 
+}
+window.addEventListener('load',populateDesignations);
+</script>
+</head>
+<body>
+<h1>Get type request Example</h1>
+<select id="designationCode">
+</select>
+<br>
+<Br>
+<a href='index.html'>Home</a>
+</body>
+</html>
